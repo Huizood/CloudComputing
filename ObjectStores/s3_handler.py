@@ -96,7 +96,9 @@ class S3Handler:
         # If bucket_name is provided, check that bucket exits.
         
         # If bucket_name is empty then display the names of all the buckets
-        
+        if self._get(bucket_name) == '':
+            print(bucket_name)
+            
         # If bucket_name is provided then display the names of all objects in the bucket
         return self._error_messages('not_implemented')
 
