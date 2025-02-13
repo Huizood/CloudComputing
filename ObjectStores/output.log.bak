@@ -1,0 +1,190 @@
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <function validate_bucket_name at 0x10674e200>
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <function remove_bucket_from_url_paths_from_model at 0x106774400>
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <function generate_idempotent_uuid at 0x10674e020>
+02/12/2025 06:21:48 PM Event before-parameter-build.s3.HeadBucket: calling handler <function _handle_request_validation_mode_member at 0x106774b80>
+02/12/2025 06:21:48 PM Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1067745e0>
+02/12/2025 06:21:48 PM Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:21:48 PM Calling endpoint provider with parameters: {'Bucket': 'hui-feng', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+02/12/2025 06:21:48 PM Endpoint provider result: https://hui-feng.s3.amazonaws.com
+02/12/2025 06:21:48 PM Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+02/12/2025 06:21:48 PM Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+02/12/2025 06:21:48 PM Event before-call.s3.HeadBucket: calling handler <function add_expect_header at 0x10674e5c0>
+02/12/2025 06:21:48 PM Event before-call.s3.HeadBucket: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:21:48 PM Event before-call.s3.HeadBucket: calling handler <function add_recursion_detection_header at 0x10674ce00>
+02/12/2025 06:21:48 PM Event before-call.s3.HeadBucket: calling handler <function add_query_compatibility_header at 0x106774ae0>
+02/12/2025 06:21:48 PM Event before-call.s3.HeadBucket: calling handler <function inject_api_version_header_if_needed at 0x10674fb00>
+02/12/2025 06:21:48 PM Making request for OperationModel(name=HeadBucket) with params: {'url_path': '', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17'}, 'body': b'', 'auth_path': '/hui-feng/', 'url': 'https://hui-feng.s3.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10639b3e0>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'hui-feng', 'params': {'Bucket': 'hui-feng'}}, 'input_params': {'Bucket': 'hui-feng'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+02/12/2025 06:21:48 PM Event request-created.s3.HeadBucket: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x106190ad0>>
+02/12/2025 06:21:48 PM Event choose-signer.s3.HeadBucket: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:21:48 PM Event choose-signer.s3.HeadBucket: calling handler <function set_operation_specific_signer at 0x10674de40>
+02/12/2025 06:21:48 PM Event before-sign.s3.HeadBucket: calling handler <function remove_arn_from_signing_path at 0x106774540>
+02/12/2025 06:21:48 PM Event before-sign.s3.HeadBucket: calling handler <function _set_extra_headers_for_unsigned_request at 0x106774c20>
+02/12/2025 06:21:48 PM Event before-sign.s3.HeadBucket: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:21:48 PM Calculating signature using v4 auth.
+02/12/2025 06:21:48 PM CanonicalRequest:
+HEAD
+/
+
+host:hui-feng.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250213T002148Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+02/12/2025 06:21:48 PM StringToSign:
+AWS4-HMAC-SHA256
+20250213T002148Z
+20250213/us-east-1/s3/aws4_request
+5ab2afbed64e8afb88a000e57a2615fe68c8098c9c16b0755f026af3e12f23c4
+02/12/2025 06:21:48 PM Signature:
+1503f3c48d7e4505face381fe8caf8bb7bfe98b7f9da33933981ccab101df116
+02/12/2025 06:21:48 PM Event request-created.s3.HeadBucket: calling handler <function add_retry_headers at 0x106774360>
+02/12/2025 06:21:48 PM Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://hui-feng.s3.amazonaws.com/, headers={'User-Agent': b'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17', 'X-Amz-Date': b'20250213T002148Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAXGZAMMPLVL3RGXFB/20250213/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=1503f3c48d7e4505face381fe8caf8bb7bfe98b7f9da33933981ccab101df116', 'amz-sdk-invocation-id': b'65cf03aa-b0c4-4beb-a42a-3393371bc20e', 'amz-sdk-request': b'attempt=1'}>
+02/12/2025 06:21:48 PM Certificate path: /Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/certifi/cacert.pem
+02/12/2025 06:21:48 PM Starting new HTTPS connection (1): hui-feng.s3.amazonaws.com:443
+02/12/2025 06:21:48 PM https://hui-feng.s3.amazonaws.com:443 "HEAD / HTTP/1.1" 404 0
+02/12/2025 06:21:48 PM Event before-parse.s3.HeadBucket: calling handler <function _handle_200_error at 0x106774900>
+02/12/2025 06:21:48 PM Event before-parse.s3.HeadBucket: calling handler <function handle_expires_header at 0x106774720>
+02/12/2025 06:21:48 PM Response headers: {'x-amz-request-id': 'FCD7V1JEG7RYHYA8', 'x-amz-id-2': 'A3/hwcGJXWKM/IxXNYHegGPNbaBeOWz8bQWIAMxMPUT80rIVqL6ulIPGkSKniNftXX3O2MHcM/BUJ8nXPOXOTg==', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Thu, 13 Feb 2025 00:21:47 GMT', 'Server': 'AmazonS3'}
+02/12/2025 06:21:48 PM Response body:
+b''
+02/12/2025 06:21:48 PM Event needs-retry.s3.HeadBucket: calling handler <function _update_status_code at 0x106774a40>
+02/12/2025 06:21:48 PM Event needs-retry.s3.HeadBucket: calling handler <botocore.retryhandler.RetryHandler object at 0x10b307950>
+02/12/2025 06:21:48 PM No retry needed.
+02/12/2025 06:21:48 PM Event needs-retry.s3.HeadBucket: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <function validate_bucket_name at 0x10674e200>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <function remove_bucket_from_url_paths_from_model at 0x106774400>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <function generate_idempotent_uuid at 0x10674e020>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadBucket: calling handler <function _handle_request_validation_mode_member at 0x106774b80>
+02/12/2025 06:22:21 PM Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1067745e0>
+02/12/2025 06:22:21 PM Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Calling endpoint provider with parameters: {'Bucket': 'hui-feng-spring2025', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+02/12/2025 06:22:21 PM Endpoint provider result: https://hui-feng-spring2025.s3.amazonaws.com
+02/12/2025 06:22:21 PM Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+02/12/2025 06:22:21 PM Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+02/12/2025 06:22:21 PM Event before-call.s3.HeadBucket: calling handler <function add_expect_header at 0x10674e5c0>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadBucket: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadBucket: calling handler <function add_recursion_detection_header at 0x10674ce00>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadBucket: calling handler <function add_query_compatibility_header at 0x106774ae0>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadBucket: calling handler <function inject_api_version_header_if_needed at 0x10674fb00>
+02/12/2025 06:22:21 PM Making request for OperationModel(name=HeadBucket) with params: {'url_path': '', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17'}, 'body': b'', 'auth_path': '/hui-feng-spring2025/', 'url': 'https://hui-feng-spring2025.s3.amazonaws.com/', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10639b3e0>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'hui-feng-spring2025', 'params': {'Bucket': 'hui-feng-spring2025'}}, 'input_params': {'Bucket': 'hui-feng-spring2025'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+02/12/2025 06:22:21 PM Event request-created.s3.HeadBucket: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x106190ad0>>
+02/12/2025 06:22:21 PM Event choose-signer.s3.HeadBucket: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:22:21 PM Event choose-signer.s3.HeadBucket: calling handler <function set_operation_specific_signer at 0x10674de40>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadBucket: calling handler <function remove_arn_from_signing_path at 0x106774540>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadBucket: calling handler <function _set_extra_headers_for_unsigned_request at 0x106774c20>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadBucket: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:22:21 PM Calculating signature using v4 auth.
+02/12/2025 06:22:21 PM CanonicalRequest:
+HEAD
+/
+
+host:hui-feng-spring2025.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250213T002221Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+02/12/2025 06:22:21 PM StringToSign:
+AWS4-HMAC-SHA256
+20250213T002221Z
+20250213/us-east-1/s3/aws4_request
+ee55b7d80c35e3e7c020dd1d3289df694b5368e71edc08676d162657d3a5532e
+02/12/2025 06:22:21 PM Signature:
+2cf2328451fdd8ed66ef2533d291134d129aa69c47f2e1412c23a52ee1991cf8
+02/12/2025 06:22:21 PM Event request-created.s3.HeadBucket: calling handler <function add_retry_headers at 0x106774360>
+02/12/2025 06:22:21 PM Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://hui-feng-spring2025.s3.amazonaws.com/, headers={'User-Agent': b'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17', 'X-Amz-Date': b'20250213T002221Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAXGZAMMPLVL3RGXFB/20250213/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=2cf2328451fdd8ed66ef2533d291134d129aa69c47f2e1412c23a52ee1991cf8', 'amz-sdk-invocation-id': b'33c12c14-99b6-4a99-8e4f-9f86c57f85d6', 'amz-sdk-request': b'attempt=1'}>
+02/12/2025 06:22:21 PM Certificate path: /Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/certifi/cacert.pem
+02/12/2025 06:22:21 PM Starting new HTTPS connection (1): hui-feng-spring2025.s3.amazonaws.com:443
+02/12/2025 06:22:21 PM https://hui-feng-spring2025.s3.amazonaws.com:443 "HEAD / HTTP/1.1" 200 0
+02/12/2025 06:22:21 PM Event before-parse.s3.HeadBucket: calling handler <function _handle_200_error at 0x106774900>
+02/12/2025 06:22:21 PM Event before-parse.s3.HeadBucket: calling handler <function handle_expires_header at 0x106774720>
+02/12/2025 06:22:21 PM Response headers: {'x-amz-id-2': 'c56lO6b0F3ZArQPQ/nBmjvRbLxg/SvXgeYQwlHvFmu1RSrVaAzI3fBFDEx0/v8iWCsH+U8c/8gs=', 'x-amz-request-id': 'RR0THK0ASNZJYB68', 'Date': 'Thu, 13 Feb 2025 00:22:22 GMT', 'x-amz-bucket-region': 'us-east-1', 'x-amz-access-point-alias': 'false', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Server': 'AmazonS3'}
+02/12/2025 06:22:21 PM Response body:
+b''
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadBucket: calling handler <function _update_status_code at 0x106774a40>
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadBucket: calling handler <botocore.retryhandler.RetryHandler object at 0x10b307950>
+02/12/2025 06:22:21 PM No retry needed.
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadBucket: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Opting out of CRT Transfer Manager. Preferred client: auto, CRT available: False, Instance Optimized: False.
+02/12/2025 06:22:21 PM Using default client. pid: 72500, thread: 8828232960
+02/12/2025 06:22:21 PM Acquiring 0
+02/12/2025 06:22:21 PM DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x105921910>}) about to wait for the following futures []
+02/12/2025 06:22:21 PM DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x105921910>}) done waiting for dependent futures
+02/12/2025 06:22:21 PM Executing task DownloadSubmissionTask(transfer_id=0, {'transfer_future': <s3transfer.futures.TransferFuture object at 0x105921910>}) with kwargs {'client': <botocore.client.S3 object at 0x10549b650>, 'config': <boto3.s3.transfer.TransferConfig object at 0x10577fef0>, 'osutil': <s3transfer.utils.OSUtils object at 0x105b07800>, 'request_executor': <s3transfer.futures.BoundedExecutor object at 0x1066d6000>, 'transfer_future': <s3transfer.futures.TransferFuture object at 0x105921910>, 'io_executor': <s3transfer.futures.BoundedExecutor object at 0x10b322a20>}
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <function sse_md5 at 0x10674e2a0>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <function validate_bucket_name at 0x10674e200>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <function remove_bucket_from_url_paths_from_model at 0x106774400>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.annotate_request_context of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <bound method ClientCreator._inject_s3_input_parameters of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <function generate_idempotent_uuid at 0x10674e020>
+02/12/2025 06:22:21 PM Event before-parameter-build.s3.HeadObject: calling handler <function _handle_request_validation_mode_member at 0x106774b80>
+02/12/2025 06:22:21 PM Event before-endpoint-resolution.s3: calling handler <function customize_endpoint_resolver_builtins at 0x1067745e0>
+02/12/2025 06:22:21 PM Event before-endpoint-resolution.s3: calling handler <bound method S3RegionRedirectorv2.redirect_from_cache of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Calling endpoint provider with parameters: {'Bucket': 'hui-feng-spring2025', 'Region': 'us-east-1', 'UseFIPS': False, 'UseDualStack': False, 'ForcePathStyle': False, 'Accelerate': False, 'UseGlobalEndpoint': True, 'Key': 'download', 'DisableMultiRegionAccessPoints': False, 'UseArnRegion': True}
+02/12/2025 06:22:21 PM Endpoint provider result: https://hui-feng-spring2025.s3.amazonaws.com
+02/12/2025 06:22:21 PM Selecting from endpoint provider's list of auth schemes: "sigv4". User selected auth scheme is: "None"
+02/12/2025 06:22:21 PM Selected auth type "v4" as "v4" with signing context params: {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}
+02/12/2025 06:22:21 PM Event before-call.s3.HeadObject: calling handler <function add_expect_header at 0x10674e5c0>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.apply_signing_cache_key of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadObject: calling handler <function add_recursion_detection_header at 0x10674ce00>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadObject: calling handler <function add_query_compatibility_header at 0x106774ae0>
+02/12/2025 06:22:21 PM Event before-call.s3.HeadObject: calling handler <function inject_api_version_header_if_needed at 0x10674fb00>
+02/12/2025 06:22:21 PM Making request for OperationModel(name=HeadObject) with params: {'url_path': '/download', 'query_string': {}, 'method': 'HEAD', 'headers': {'User-Agent': 'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17'}, 'body': b'', 'auth_path': '/hui-feng-spring2025/download', 'url': 'https://hui-feng-spring2025.s3.amazonaws.com/download', 'context': {'client_region': 'us-east-1', 'client_config': <botocore.config.Config object at 0x10639b3e0>, 'has_streaming_input': False, 'auth_type': 'v4', 'unsigned_payload': None, 's3_redirect': {'redirected': False, 'bucket': 'hui-feng-spring2025', 'params': {'Bucket': 'hui-feng-spring2025', 'Key': 'download'}}, 'input_params': {'Bucket': 'hui-feng-spring2025', 'Key': 'download'}, 'signing': {'region': 'us-east-1', 'signing_name': 's3', 'disableDoubleEncoding': True}, 'endpoint_properties': {'authSchemes': [{'disableDoubleEncoding': True, 'name': 'sigv4', 'signingName': 's3', 'signingRegion': 'us-east-1'}]}}}
+02/12/2025 06:22:21 PM Event request-created.s3.HeadObject: calling handler <function signal_not_transferring at 0x10b282160>
+02/12/2025 06:22:21 PM Event request-created.s3.HeadObject: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x106190ad0>>
+02/12/2025 06:22:21 PM Event choose-signer.s3.HeadObject: calling handler <bound method ClientCreator._default_s3_presign_to_sigv2 of <botocore.client.ClientCreator object at 0x10680b920>>
+02/12/2025 06:22:21 PM Event choose-signer.s3.HeadObject: calling handler <function set_operation_specific_signer at 0x10674de40>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadObject: calling handler <function remove_arn_from_signing_path at 0x106774540>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadObject: calling handler <function _set_extra_headers_for_unsigned_request at 0x106774c20>
+02/12/2025 06:22:21 PM Event before-sign.s3.HeadObject: calling handler <bound method S3ExpressIdentityResolver.resolve_s3express_identity of <botocore.utils.S3ExpressIdentityResolver object at 0x10b307980>>
+02/12/2025 06:22:21 PM Calculating signature using v4 auth.
+02/12/2025 06:22:21 PM CanonicalRequest:
+HEAD
+/download
+
+host:hui-feng-spring2025.s3.amazonaws.com
+x-amz-content-sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+x-amz-date:20250213T002221Z
+
+host;x-amz-content-sha256;x-amz-date
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+02/12/2025 06:22:21 PM StringToSign:
+AWS4-HMAC-SHA256
+20250213T002221Z
+20250213/us-east-1/s3/aws4_request
+01c8769dfa6d7cc318436314637600162e2ba90f8ccb7c0f2f8e3fa7210d213f
+02/12/2025 06:22:21 PM Signature:
+e9c19717208b1abf5560763c1fa35edd6efe9285b4db0ee7c04af8c12f43175c
+02/12/2025 06:22:21 PM Event request-created.s3.HeadObject: calling handler <function signal_transferring at 0x10b282200>
+02/12/2025 06:22:21 PM Event request-created.s3.HeadObject: calling handler <function add_retry_headers at 0x106774360>
+02/12/2025 06:22:21 PM Sending http request: <AWSPreparedRequest stream_output=False, method=HEAD, url=https://hui-feng-spring2025.s3.amazonaws.com/download, headers={'User-Agent': b'Boto3/1.36.17 md/Botocore#1.36.17 ua/2.0 os/macos#22.1.0 md/arch#arm64 lang/python#3.12.4 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.17', 'X-Amz-Date': b'20250213T002221Z', 'X-Amz-Content-SHA256': b'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAXGZAMMPLVL3RGXFB/20250213/us-east-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=e9c19717208b1abf5560763c1fa35edd6efe9285b4db0ee7c04af8c12f43175c', 'amz-sdk-invocation-id': b'6fc8035d-dd17-45cf-b1d1-bbf606451655', 'amz-sdk-request': b'attempt=1'}>
+02/12/2025 06:22:21 PM Certificate path: /Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/certifi/cacert.pem
+02/12/2025 06:22:21 PM https://hui-feng-spring2025.s3.amazonaws.com:443 "HEAD /download HTTP/1.1" 404 0
+02/12/2025 06:22:21 PM Event before-parse.s3.HeadObject: calling handler <function _handle_200_error at 0x106774900>
+02/12/2025 06:22:21 PM Event before-parse.s3.HeadObject: calling handler <function handle_expires_header at 0x106774720>
+02/12/2025 06:22:21 PM Response headers: {'x-amz-request-id': 'RR0V2Y2BPY8MM5VZ', 'x-amz-id-2': 'URvJHIOGSpgAWO8qw/j5LzGWz34YYtXRy+pWsxjgP+JK4MVfV0GSA4sMCWMX5sIcs17QEKmRxlA=', 'Content-Type': 'application/xml', 'Transfer-Encoding': 'chunked', 'Date': 'Thu, 13 Feb 2025 00:22:21 GMT', 'Server': 'AmazonS3'}
+02/12/2025 06:22:21 PM Response body:
+b''
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadObject: calling handler <function _update_status_code at 0x106774a40>
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadObject: calling handler <botocore.retryhandler.RetryHandler object at 0x10b307950>
+02/12/2025 06:22:21 PM No retry needed.
+02/12/2025 06:22:21 PM Event needs-retry.s3.HeadObject: calling handler <bound method S3RegionRedirectorv2.redirect_from_error of <botocore.utils.S3RegionRedirectorv2 object at 0x10b2d5400>>
+02/12/2025 06:22:21 PM Exception raised.
+Traceback (most recent call last):
+  File "/Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/s3transfer/tasks.py", line 265, in _main
+    self._submit(transfer_future=transfer_future, **kwargs)
+  File "/Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/s3transfer/download.py", line 352, in _submit
+    response = client.head_object(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/botocore/client.py", line 569, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/huifeng/CloudComputing/venv/lib/python3.12/site-packages/botocore/client.py", line 1023, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (404) when calling the HeadObject operation: Not Found
+02/12/2025 06:22:21 PM Releasing acquire 0/None
