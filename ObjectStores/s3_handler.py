@@ -246,7 +246,7 @@ class S3Handler:
             else:
                 source_file_name = parts[1]
                 bucket_name = parts[2]
-                if len(parts) == 4:
+                if len(parts) == 3:
                     dest_object_name = parts[3]
                 else:
                     dest_object_name = ''
